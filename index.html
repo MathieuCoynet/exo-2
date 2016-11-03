@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+		<meta charset="utf-8">
+		<title>Exercice 1</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		</head>
+	<body>
+		  <style type="text/css">
+		  	 .photo {width: 500px;}
+		  	 .vert {background-color: green;}
+		  	 .rouge {background-color: red;}
+		  	 .bleu {background-color: blue;}
+		  	 .normal {background-color: white;}
+		  	 .champ1 {border: 1px solid green;}
+		  	 .champ2 {border: 1px solid red;}
+		  </style>
+		  <img src="images/image.jpg" id="image" />	
+		  <form>
+		    <button type="button" name="button" id="clique-moi" >Clique-moi !</button>
+		  </form>
+		  <a id="afficher" href="#">Afficher</a>
+		  <a id="cacher" href="#">Masquer</a>
+		  <div id="texte">
+		    <p>Joseph Dacre Carlyle (Carlisle, 4 juin 1758 - Newcastle upon Tyne, 12 avril 1804) est un orientaliste anglais.Après ses études à l'université de Cambridge, il y devint professeur d'arabe. En 1799, il fut attaché par le gouvernement britannique à l'ambassade de Lord Elgin dans l'Empire ottoman. Il était chargé d'explorer les bibliothèques de la région (principalement celle du Sérail) pour y découvrir (et y acquérir) des manuscrits inédits de textes antiques. Il se rendit aussi en Égypte, en Terre sainte et au mont Athos. Sa mission fut, de son point de vue, un échec. Il acheta quelques centaines d'ouvrages, principalement dans les bazars de Constantinople, mais aucun ne contenait de texte inédit. Cependant, la façon dont certains manuscrits avaient été acquis, principalement ceux du patriarche de Jérusalem Anthème Ier, ainsi que la querelle entamée sur la plaine de Troie entre Carlyle et un autre professeur de Cambridge, Edward Daniel Clarke, allaient être utilisées, après la mort de Carlyle, contre Lord Elgin, dans les controverses autour de l'acquisition des « marbres d'Elgin ».De retour en Grande-Bretagne à l'automne 1801, Joseph Dacre Carlyle entama une traduction en arabe de la Bible. Sa mort en avril 1804 coupa court à ce travail.</p>
+		 </div>
+		 <div>
+			  <div class="color green" id="green"></div>
+			  <div class="color red" id="red"></div>
+			  <div class="color blue" id="blue"></div>
+		  </div>
+		  <form>
+			    <label for="nom">Nom : </label><input type="text" name="nom" value="" id="nom" />
+			    <label for="prenom">Prénom : </label><input type="text" name="prenom" value="" id="prenom" />
+			    <button type="button" name="button" >Envoyer</button>
+		  </form>
+		  <script>
+		  		$('#clique-moi').click(function(){
+		  			alert('Jolie!');
+		  		});
+		  </script>
+		  <script>
+		  		$('#image').dblclick(function(){
+		  			$('#image').addClass('photo');
+		  		});
+		  </script>
+		  <script>
+		  		$('#afficher').click(function(){
+		  			$('#texte').show();
+		  		});
+		  		$('#cacher').click(function(){
+		  			$('#texte').hide();
+		  		});
+		  </script>
+		  <script>
+		  		$('#green').hover(function(){
+		  			$('#texte').addClass('vert');
+		  		});
+		  		$('#green').mouseout(function(){
+		  			$('#texte').addClass('normal');
+		  		});
+		  </script>
+		  <script>		
+		  		$('#red').hover(function(){
+		  			$('#texte').addClass('rouge');
+		  		});
+		  		$('#red').mouseout(function(){
+		  			$('#texte').addClass('normal');
+		  		});
+		  </script>
+		  <script>			
+		  		$('#blue').hover(function(){
+		  			$('#texte').addClass('bleu');
+		  		});
+		  		$('#blue').mouseout(function(){
+		  			$('#texte').addClass('normal');
+		  		});
+		  </script>
+		  <script>
+		  		$('#nom').focus(function(){
+		  			$('#nom').addClass('champ1');	
+		  		});
+		  		$('#nom').focusout(function(){
+		  			$('#nom').addClass('champ2');
+		  		});
+		  </script>
+		  <script> 			
+		  		$('#prenom').focus(function(){
+		  			$('#prenom').addClass('champ1');	
+		  		});
+		  		$('#prenom').focusout(function(){
+		  			$('#prenom').addClass('champ2');
+		  		});	
+		  </script>
+
+
+	</body>
+</html>
